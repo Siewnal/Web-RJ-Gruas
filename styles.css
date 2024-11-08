@@ -96,15 +96,32 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-#servicios ul {
-    list-style-type: none;
-    padding: 0;
+#servicios .service-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
 }
 
-#servicios ul li {
-    font-size: 18px;
-    margin: 15px 0;
-    color: #555;
+#servicios .card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+#servicios .card:hover {
+    transform: translateY(-10px);
+}
+
+#servicios .card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
 }
 
 /* Carrusel */
@@ -178,6 +195,11 @@ button:hover {
         padding: 10px 25px;
         font-size: 16px;
     }
+
+    #servicios .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -196,5 +218,10 @@ button:hover {
     .cta-button {
         padding: 8px 20px;
         font-size: 14px;
+    }
+
+    #servicios .service-cards {
+        flex-direction: column;
+        align-items: center;
     }
 }
