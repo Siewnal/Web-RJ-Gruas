@@ -5,6 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Servicio de Grúas y Transporte - RJ</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Estilo para el botón de emergencia */
+    .emergency-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 16px;
+      border-radius: 50px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .emergency-button:hover {
+      background-color: darkred;
+    }
+  </style>
 </head>
 <body>
   <!-- Encabezado con navegación -->
@@ -68,6 +89,9 @@
   <footer>
     <p>&copy; 2024 RJ Gruas - Todos los derechos reservados</p>
   </footer>
+
+  <!-- Botón de emergencia -->
+  <button class="emergency-button" onclick="window.location.href='tel:+56998043680'">Emergencia</button>
 
   <script src="script.js"></script>
 </body>
