@@ -3,59 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RJ Gruas - Servicios de Grúas y Transportes</title>
+  <title>Servicio de Grúas y Transporte - RJ</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Barra de navegación superior -->
+  <!-- Encabezado con navegación -->
   <header>
-    <nav>
+    <nav class="navbar">
       <ul>
-        <li><a href="#nosotros">Sobre Nosotros</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#reseñas">Reseñas</a></li>
-        <li><a href="#galeria">Galería de Trabajos</a></li>
-        <li><a href="#faq">Preguntas Frecuentes</a></li>
-        <li><a href="tel:+56998043680" class="emergencia">Emergencia</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#solicitud" class="highlight">Solicitar Servicio</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Carrusel de imágenes -->
-  <section id="carrusel">
-    <div class="carrusel-images">
-      <img src="gruavera1.jpg" alt="Grúa en movimiento" class="carrusel-item">
-      <img src="gruavera2.jpg" alt="Grúa operando" class="carrusel-item">
-      <img src="gruavera3.jpg" alt="Grúa en carretera" class="carrusel-item">
+  <!-- Sección principal con imagen destacada -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Solicita tu Servicio de Remolque y Transporte de Vehículos</h1>
+      <p>Confianza, rapidez y seguridad para el transporte de tu vehículo.</p>
+      <button class="cta-button" onclick="window.location.href='tel:+56998043680'">Solicitar Ahora</button>
+    </div>
+    <img src="carrusel.jpg" alt="Camión de remolque en la carretera" class="hero-image">
+  </section>
+
+  <!-- Sección de información y servicios -->
+  <section id="servicios" class="info-section">
+    <h2>Nuestros Servicios</h2>
+    <div class="service-cards">
+      <div class="card">
+        <img src="icon1.png" alt="Icono de servicio 1">
+        <h3>Remolque de Vehículos</h3>
+        <p>Servicios de grúa para vehículos averiados o en situaciones de emergencia.</p>
+      </div>
+      <div class="card">
+        <img src="icon2.png" alt="Icono de servicio 2">
+        <h3>Transporte de Maquinaria</h3>
+        <p>Movilización de maquinaria pesada con seguridad garantizada.</p>
+      </div>
+      <div class="card">
+        <img src="icon3.png" alt="Icono de servicio 3">
+        <h3>Asistencia en Carretera</h3>
+        <p>Atención rápida y eficiente para cualquier imprevisto en la carretera.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Bienvenida -->
-  <section id="bienvenida">
-    <h1>Bienvenidos a RJ Gruas</h1>
-    <p>Somos una empresa líder en servicios de grúas y transportes, comprometidos con la seguridad y eficiencia en cada traslado.</p>
-    <button onclick="window.location.href='tel:+56998043680'">Solicitar Servicio</button>
-  </section>
-
-  <!-- Resumen de Servicios -->
-  <section id="servicios">
-    <h2>Nuestros Servicios</h2>
-    <p>Ofrecemos una amplia variedad de servicios para el traslado de vehículos, maquinaria y más. Aquí te mostramos lo que hacemos:</p>
+<!-- Sección "Contacto" -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Estamos disponibles para atender tus solicitudes y preguntas. Contáctanos a través de las siguientes opciones:</p>
     <ul>
-      <li>Grúas para vehículos de emergencia</li>
-      <li>Transporte de maquinaria pesada</li>
-      <li>Servicios de rescate y remolque</li>
-    </ul>
-  </section>
-
-  <!-- Preguntas Frecuentes -->
-  <section id="faq">
-    <h2>Preguntas Frecuentes</h2>
-    <p>Aquí respondemos a algunas de las preguntas más comunes sobre nuestros servicios:</p>
-    <ul>
-      <li><strong>¿Cómo puedo solicitar un servicio de grúa?</strong> Llama al número de emergencia o utiliza el botón 'Solicitar Servicio' o 'Emergencia' si es urgente.</li>
-      <li><strong>¿Cuánto tiempo tarda en llegar la grúa?</strong> Dependemos de tu ubicación, pero generalmente tardamos entre 30 y 60 minutos.</li>
-      <li><strong>¿Ofrecen servicios fuera de la ciudad?</strong> Sí, podemos ofrecer servicios de transporte fuera de la ciudad.</li>
+      <li>Teléfono/WhatsApp: <a href="tel:+56998043680">+56 9 9804 3680</a></li>
+      <li>WhatsApp: <a href="https://wa.me/56998043680" target="_blank">Enviar mensaje por WhatsApp</a></li>
+      <li>Instagram: <a href="https://www.instagram.com/gruas_rj?igsh=MWNnMTZ1eTY2MTA1aA==" target="_blank">@gruas_rj</a></li>
+      <li>Facebook: <a href="https://www.facebook.com/profile.php?id=100090025892145&mibextid=ZbWKwL" target="_blank">Facebook de Grúas RJ</a></li>
     </ul>
   </section>
 
