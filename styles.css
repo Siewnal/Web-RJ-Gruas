@@ -225,3 +225,28 @@ button:hover {
         align-items: center;
     }
 }
+
+/* Estilos para el botón de emergencia */
+.emergency-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff0000; /* Rojo brillante */
+  border-radius: 50%;
+  padding: 15px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 200;
+}
+
+.emergency-button a {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+.emergency-button a:hover {
+  background-color: #cc0000; /* Rojo más oscuro en hover */
+}
