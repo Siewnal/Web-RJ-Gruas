@@ -25,6 +25,49 @@
     .emergency-button:hover {
       background-color: darkred;
     }
+
+    /* Estilos para el modal */
+    .modal {
+      display: none; /* Por defecto el modal está oculto */
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 300px;
+    }
+
+    .modal-button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      background-color: green;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .modal-button:hover {
+      background-color: darkgreen;
+    }
+
+    .close-btn {
+      margin-top: 10px;
+      color: #aaa;
+      font-size: 20px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -35,8 +78,9 @@
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#contacto">Contacto</a></li>
-        <li><a href="https://wa.me/56998043680" target="_blank" class="highlight">Agendar Servicio</a></li>
-        <li><a href="#solicitud" class="highlight">Solicitar Servicio</a></li>
+        <!-- Enlace que lleva al botón verde de solicitar servicio -->
+        <li><a href="#solicitarServicio" class="highlight">Solicitar Servicio</a></li>
+        <li><a href="https://wa.me/56998043680?text=¡Hola,%20necesito%20un%20servicio!" target="_blank" class="highlight">Agendar Servicio</a></li>
       </ul>
     </nav>
   </header>
@@ -46,10 +90,21 @@
     <div class="hero-content">
       <h1>Solicita tu Servicio de Remolque y Transporte de Vehículos</h1>
       <p>Confianza, rapidez y seguridad para el transporte de tu vehículo.</p>
-      <button class="cta-button" onclick="window.location.href='tel:+56998043680'">Solicitar Ahora</button>
+      <!-- Agregar un ID para que el enlace desde la barra de navegación pueda llevar a este botón -->
+      <button class="cta-button" id="solicitarServicio" onclick="openModal()">Solicitar Ahora</button>
     </div>
     <img src="carrusel.jpg" alt="Camión de remolque en la carretera" class="hero-image">
   </section>
+
+  <!-- Modal con opciones de contacto -->
+  <div id="serviceModal" class="modal">
+    <div class="modal-content">
+      <h2>¿Cómo deseas contactarnos?</h2>
+      <button class="modal-button" onclick="window.location.href='tel:+56998043680'">Llamar</button>
+      <button class="modal-button" onclick="window.location.href='https://wa.me/56998043680?text=%C2%A1Hola,%20necesito%20un%20servicio!'" target="_blank">Enviar Mensaje por WhatsApp</button>
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+    </div>
+  </div>
 
   <!-- Sección de información y servicios -->
   <section id="servicios" class="info-section">
@@ -79,7 +134,7 @@
     <p>Estamos disponibles para atender tus solicitudes y preguntas. Contáctanos a través de las siguientes opciones:</p>
     <ul>
       <li>Teléfono/WhatsApp: <a href="tel:+56998043680">+56 9 9804 3680</a></li>
-      <li>WhatsApp: <a href="https://wa.me/56998043680" target="_blank">Enviar mensaje por WhatsApp</a></li>
+      <li>WhatsApp: <a href="https://wa.me/56998043680?text=%C2%A1Hola,%20necesito%20un%20servicio!" target="_blank">Enviar mensaje por WhatsApp</a></li>
       <li>Instagram: <a href="https://www.instagram.com/gruas_rj?igsh=MWNnMTZ1eTY2MTA1aA==" target="_blank">@gruas_rj</a></li>
       <li>Facebook: <a href="https://www.facebook.com/profile.php?id=100090025892145&mibextid=ZbWKwL" target="_blank">Facebook de Grúas RJ</a></li>
       <li>TikTok: <a href="https://www.tiktok.com/@gruasrj?_t=8rDwgI77BVH&_r=1" target="_blank">@gruasrj</a></li>
@@ -94,6 +149,17 @@
   <!-- Botón de emergencia -->
   <button class="emergency-button" onclick="window.location.href='tel:+56998043680'">Emergencia</button>
 
-  <script src="script.js"></script>
+  <script>
+    // Función para abrir el modal
+    function openModal() {
+      document.getElementById('serviceModal').style.display = 'flex';
+    }
+
+    // Función para cerrar el modal
+    function closeModal() {
+      document.getElementById('serviceModal').style.display = 'none';
+    }
+  </script>
+
 </body>
 </html>
