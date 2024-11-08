@@ -6,11 +6,11 @@ function rotateImages() {
 
   // Ocultar todas las imágenes
   images.forEach((image) => {
-    image.style.display = "none";
+    image.classList.remove("show"); // Elimina la clase que hace visible la imagen
   });
 
   // Mostrar la imagen actual
-  images[currentIndex].style.display = "block";
+  images[currentIndex].classList.add("show"); // Añade la clase para hacer visible la imagen
 
   // Avanzar al siguiente índice
   currentIndex = (currentIndex + 1) % totalImages;
