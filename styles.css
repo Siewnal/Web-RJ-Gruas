@@ -4,86 +4,67 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f8ff; /* Color de fondo más suave */
-  }
-  
-  header {
+}
+
+header {
     background-color: #007bff; /* Azul celeste más fuerte */
     color: white;
     padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 100;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin: 0 20px;
-  }
-  
-  nav ul li a {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
     transition: color 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    color: #e0e0e0; /* Gris claro al pasar el ratón */
-  }
-  
-  nav ul li .emergencia {
-    background-color: #ff5733; /* Color de emergencia más vibrante */
-    padding: 10px 25px;
-    border-radius: 5px;
-    font-size: 18px;
-  }
-  
-  #carrusel {
-    width: 100%;
-    height: 500px; /* Aumentamos el tamaño del carrusel */
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .carrusel-images {
+}
+
+nav ul li a:hover {
+    color: #ffdd57; /* Color de hover */
+}
+
+/* Sección Principal */
+#hero {
     display: flex;
-    transition: transform 1s ease;
-  }
-  
-  .carrusel-item {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  #bienvenida {
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 40px 20px;
-    background-color: #cce7ff; /* Fondo celeste claro */
-    color: #333;
-  }
-  
-  #bienvenida h1 {
-    color: #006bb3; /* Título de color azul más oscuro */
+    position: relative;
+    padding: 80px 20px;
+    background-color: #cce7ff; /* Fondo suave para el hero */
+}
+
+.hero-content h1 {
     font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  #bienvenida p {
+    color: #006bb3; /* Azul más oscuro */
+}
+
+.hero-content p {
     font-size: 18px;
     color: #333;
     margin-bottom: 20px;
-  }
-  
-  button {
-    background-color: #00aaff; /* Celeste brillante */
+}
+
+/* Botón de "Solicitar Ahora" */
+.cta-button {
+    background-color: #28a745; /* Verde */
     color: white;
     padding: 12px 30px;
     font-size: 18px;
@@ -91,72 +72,129 @@ body {
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #0099cc; /* Tonalidad más oscura cuando pasa el ratón */
-  }
-  
-  button:active {
-    background-color: #0077b3; /* Tonalidad más oscura cuando el botón es presionado */
-  }
-  
-  #servicios {
+}
+
+.cta-button:hover {
+    background-color: #218838; /* Verde oscuro en hover */
+}
+
+.cta-button:active {
+    background-color: #1e7e34; /* Verde más oscuro cuando se presiona */
+}
+
+/* Sección de Servicios */
+#servicios {
     padding: 50px 20px;
     background-color: #ffffff;
     text-align: center;
     color: #333;
-  }
-  
-  #servicios h2 {
+}
+
+#servicios h2 {
     font-size: 32px;
     color: #006bb3; /* Título en azul oscuro */
     margin-bottom: 20px;
-  }
-  
-  #servicios ul {
+}
+
+#servicios ul {
     list-style-type: none;
     padding: 0;
-  }
-  
-  #servicios ul li {
+}
+
+#servicios ul li {
     font-size: 18px;
     margin: 15px 0;
     color: #555;
-  }
-  
-  #faq {
-    padding: 50px 20px;
-    background-color: #cce7ff;
-    color: #333;
-  }
-  
-  #faq h2 {
-    font-size: 32px;
-    color: #006bb3; /* Título en azul oscuro */
-    margin-bottom: 20px;
-  }
-  
-  #faq ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  #faq ul li {
-    font-size: 18px;
-    margin: 15px 0;
-    color: #555;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #007bff;
+}
+
+/* Carrusel */
+#carrusel {
+    width: 100%;
+    height: 500px; /* Ajuste de tamaño */
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.carrusel-images {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.carrusel-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-  }
-  
-  footer p {
-    margin: 0;
-    font-size: 14px;
-  }
-  
+    font-size: 30px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Consultas de medios para hacer el diseño responsivo */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .cta-button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
